@@ -6,8 +6,8 @@
     <title>Lotto Number Generator</title>
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/cleave.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 
     <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
@@ -28,7 +28,13 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>
-      <p name="WordBox" id="wordbox"></p>
-      <input type="button" value="Generate" onClick="lotto();" id="button" />
+      <p><input class="lotto_numbers" type="text"/></p>
+
+      <script>
+      var cleave = new Cleave('.lotto_numbers', {
+        numeral: true,
+        numeralThousandsGroupStyle: 'thousand'
+      });
+      </script>
   </body>
 </html>
