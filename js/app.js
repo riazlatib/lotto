@@ -28,3 +28,13 @@ var sentance = subject[subject_random] + ' ' + predicate[predicate_random] + ' '
 document.getElementById("wordbox").innerHTML = sentance;
 // ---------------------------------------------------------------------------- ROUGH DRAFT
 }
+
+jQuery(document).ready(function() {
+  var numbers = '123456789123';
+  jQuery('.lotto_numbers').val(numbers);
+
+  var cleave = new Cleave('.lotto_numbers', {
+    blocks: [2,2,2,2,2,2],
+    uppercase: true
+  });
+});
